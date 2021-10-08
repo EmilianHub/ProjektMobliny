@@ -18,27 +18,6 @@ namespace ProjektMobliny
             MainPage = new AppShell();
         }
 
-        private async void Button_Clicked(Object sender, EventArgs e)
-        {
-            try
-            {
-                var lokacja = await Geolocation.GetLastKnownLocationAsync();
-                if(lokacja == null)
-                {
-                    lokacja = await Geolocation.GetLocationAsync(new GeolocationRequest 
-                    { 
-                        DesiredAccuracy = GeolocationAccuracy.Medium, 
-                        Timeout = TimeSpan.FromSeconds(45) 
-                    }); 
-                }
-
-            }
-            catch(Exception ew)
-            {
-                 Console.WriteLine($"Coś poszło nie tak {ew.Message}");
-            }
-        }
-
         protected override void OnStart()
         {
         }
