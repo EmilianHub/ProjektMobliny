@@ -3,7 +3,6 @@ using ProjektMobliny.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
 
 namespace ProjektMobliny
 {
