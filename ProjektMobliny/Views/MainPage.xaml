@@ -9,29 +9,23 @@
         <viewmodels:MainViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
-            </StackLayout>
+
+    <ContentPage.Content>
+        <StackLayout x:Name="Glowna">
+            <Label Text="Witaj w aplikacji, dzięki której zaoszczedzisz parę groszy! " TextColor="Black" FontSize="Large"
+               HorizontalTextAlignment="Center" Margin="0, 40, 0 ,2"></Label>
+            <Label Text = "Na poczatek wybierz preferowaną stacje paliw: " TextColor="Black" FontSize="Large"
+               HorizontalTextAlignment="Center"
+            ></Label>
+            <Picker x:Name="wybor" TextColor="Black" Margin="0, 5" HorizontalTextAlignment="Center" FontSize="40" 
+                    Background="#e3e3e3" TitleColor="Gray" >
+            </Picker>
+        <Button x:Name="przycisk" ></Button>
+        <Entry x:Name="wejscie" TextColor="Black"></Entry>
         </StackLayout>
-        <Button Margin="0,10,0,0" Text="Wybierz Stacje"                    
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
-                    
-    </Grid>
+    </ContentPage.Content>
+
 
 
 
