@@ -7,12 +7,12 @@ using Xamarin.Forms;
 
 namespace ProjektMobliny.ViewModels
 {
-    public class NewItemViewModel : BaseViewModel
+    public class NewPowiadomieniaViewModel : BaseViewModel
     {
         private string text;
         private string description;
 
-        public NewItemViewModel()
+        public NewPowiadomieniaViewModel()
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);

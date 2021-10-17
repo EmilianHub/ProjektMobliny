@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace ProjektMobliny.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class PowiadomieniaViewModel : BaseViewModel
     {
         private Item _selectedItem;
 
@@ -17,9 +17,9 @@ namespace ProjektMobliny.ViewModels
         public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public PowiadomieniaViewModel()
         {
-            Title = "Browse";
+            Title = "Powiadomienia";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -69,7 +69,7 @@ namespace ProjektMobliny.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+            await Shell.Current.GoToAsync(nameof(NewPowiadomieniaPage));
         }
 
         async void OnItemSelected(Item item)
@@ -78,7 +78,7 @@ namespace ProjektMobliny.ViewModels
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            await Shell.Current.GoToAsync($"{nameof(PowiadomieniaDetailPage)}?{nameof(PowiadomieniaDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

@@ -11,8 +11,8 @@ namespace ProjektMobliny
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(PowiadomieniaDetailPage), typeof(PowiadomieniaDetailPage));
+            Routing.RegisterRoute(nameof(NewPowiadomieniaPage), typeof(NewPowiadomieniaPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

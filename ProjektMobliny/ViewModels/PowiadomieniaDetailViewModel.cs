@@ -7,7 +7,7 @@ using Xamarin.Forms;
 namespace ProjektMobliny.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class PowiadomieniaDetailViewModel : BaseViewModel
     {
         private string itemId;
         private string text;

@@ -14,6 +14,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\PowiadomieniaDetailPage.xaml.cs">
+      <DependentUpon>PowiadomieniaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewPowiadomieniaPage.xaml.cs">
+      <DependentUpon>NewPowiadomieniaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PowiadomieniaPage.xaml.cs">
+      <DependentUpon>PowiadomieniaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

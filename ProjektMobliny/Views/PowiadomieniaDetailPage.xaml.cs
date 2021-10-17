@@ -4,12 +4,12 @@ using Xamarin.Forms;
 
 namespace ProjektMobliny.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class PowiadomieniaDetailPage : ContentPage
     {
-        public ItemDetailPage()
+        public PowiadomieniaDetailPage()
         {
             InitializeComponent();
-            BindingContext = new ItemDetailViewModel();
+            BindingContext = new PowiadomieniaDetailViewModel();
         }
     }
 }

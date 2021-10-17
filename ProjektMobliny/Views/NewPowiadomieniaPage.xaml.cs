@@ -8,14 +8,14 @@ using Xamarin.Forms.Xaml;
 
 namespace ProjektMobliny.Views
 {
-    public partial class NewItemPage : ContentPage
+    public partial class NewPowiadomieniaPage : ContentPage
     {
         public Item Item { get; set; }
 
-        public NewItemPage()
+        public NewPowiadomieniaPage()
         {
             InitializeComponent();
-            BindingContext = new NewItemViewModel();
+            BindingContext = new NewPowiadomieniaViewModel();
         }
     }
 }

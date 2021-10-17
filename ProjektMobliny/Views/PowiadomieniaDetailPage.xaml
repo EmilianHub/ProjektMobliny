@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjektMobliny.Views.PowiadomieniaDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Text:" TextColor="Black" FontSize="Medium" />
+        <Label Text="{Binding Text}" TextColor="Black" FontSize="Small"/>
+        <Label Text="Description:" TextColor="Black" FontSize="Medium" />
+        <Label Text="{Binding Description}" TextColor="Black" FontSize="Small"/>
+    </StackLayout>
+    
+</ContentPage>
