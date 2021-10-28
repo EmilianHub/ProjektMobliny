@@ -9,14 +9,13 @@
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel />
     </ContentPage.BindingContext>
-
     <StackLayout>
         <Label HorizontalOptions="Center"
-               VerticalOptions="Start"
-               FontSize="20.9"
-               Text="Tabela przedstawiajaca ceny paliw"
-               HorizontalTextAlignment="Center"
-               TextColor ="Black" />
+                   VerticalOptions="Start"
+                   FontSize="20.9"
+                   Text="Tabela przedstawiajaca ceny paliw"
+                   HorizontalTextAlignment="Center"
+                   TextColor ="Black" />
 
         <Frame Margin="5,0,5,-5" Padding="0" BackgroundColor="Bisque" BorderColor="Black" CornerRadius="10">
             <Grid Padding="0">
@@ -34,10 +33,10 @@
                 <Image Source="ON.png" Grid.Column="3" VerticalOptions="Center" HeightRequest="30" />
                 <Image Source="LPG.jpg" Grid.Column="4" VerticalOptions="Center" HeightRequest="30" />
                 <BoxView Grid.Column="0" 
-                         BackgroundColor="DarkSlateGray" 
-                         HorizontalOptions="EndAndExpand" 
-                         VerticalOptions="FillAndExpand"
-                         WidthRequest="1"/>
+                             BackgroundColor="DarkSlateGray" 
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="FillAndExpand"
+                             WidthRequest="1"/>
             </Grid>
         </Frame>
         <ListView ItemsSource="{Binding Stacja}" SeparatorVisibility="None" SelectionMode="None" VerticalOptions="Center">
@@ -60,23 +59,25 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Frame CornerRadius="20" Margin="0,0,0,220">
+        <Frame CornerRadius="20" Margin="0,0,0,210">
             <StackLayout>
                 <Label VerticalOptions="Center"
-                       FontSize="20.9"
-                       Text="Wybierz Stacje"
-                       HorizontalTextAlignment="Center"
-                       TextColor ="Black"                       
-                        />
-                <Picker Title="Wybierz stację"
-                        TitleColor="LightGray"
-                        TextColor="Black"
-                        FontSize="Large"
-                        HorizontalTextAlignment="Center"
-                        ItemsSource="{Binding Stacja}"
-                        />
+                           FontSize="20.9"
+                           Text="Wybierz Stacje"
+                           HorizontalTextAlignment="Center"
+                           TextColor ="Black"                       
+                            />
+                <Picker 
+                            Title="Wybierz stację"
+                            TitleColor="LightGray"
+                            TextColor="Black"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            ItemsSource="{Binding Stacja}"
+                            SelectedItem="{Binding WybranastacjaCommand, Mode=TwoWay}"
+                            />
+                <Label Text="{Binding WybranastacjaCommand.Nazwa}" TextColor="Black"/>
             </StackLayout>
         </Frame>
     </StackLayout>
-
 </ContentPage>

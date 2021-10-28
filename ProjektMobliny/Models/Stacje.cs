@@ -8,6 +8,7 @@ namespace ProjektMobliny.Models
     {
         public int Id { get; set; }
         public string Nazwa { get; set; }
+        public string Wybranastacja { get; set; }
         public double Cena95 { get; set; }
         public double Cena98 { get; set; }
         public double CenaON { get; set; }
@@ -16,6 +17,6 @@ namespace ProjektMobliny.Models
         public override string ToString()
         {
             return this.Nazwa;
-        }
+        }     
     }
 }

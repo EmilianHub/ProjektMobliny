@@ -13,7 +13,6 @@ namespace ProjektMobliny.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        public string wybranastacja;
         public ObservableRangeCollection<Stacje>Stacja { get; set; }
         public MainViewModel()
         {
@@ -25,7 +24,7 @@ namespace ProjektMobliny.ViewModels
                 new Stacje() { Id = 4, Nazwa = "Lotos", Cena95 = 6.12, Cena98 = 6.35, CenaON = 4.90, CenaLPG = 3.12 },
                 new Stacje() { Id = 5, Nazwa = "Circle", Cena95 = 6.11, Cena98 = 6.22, CenaON = 4.23, CenaLPG = 3.12 },
             };
-                     
+
             //wybor.Title = "Wybierz stacje";
             //wybor.ItemsSource = Stacja;
             //Glowna.Children.Add(wybor);
@@ -34,11 +33,20 @@ namespace ProjektMobliny.ViewModels
             //Glowna.Children.Add(przycisk);
             //wejscie.Keyboard = Keyboard.Text;
             //wejscie.Placeholder = "Wybrana stacja";
-            //Glowna.Children.Add(wejscie);                   
-    }      
-        public void Przycisk_Clicked(object sender, EventArgs e)
+            //Glowna.Children.Add(wejscie);
+
+            
+        }
+
+        Stacje Wybranastacja;
+        public Stacje WybranastacjaCommand
         {
-            //wejscie.Text = wybor.SelectedItem.ToString();
+            get => Wybranastacja;
+            set
+            {
+                Wybranastacja = value;
+                OnPropertyChanged();
+            }
         }
         private async void OnOpenGelokacje(object ob) => await Shell.Current.GoToAsync($"//{nameof(geolokacja)}");
     }
