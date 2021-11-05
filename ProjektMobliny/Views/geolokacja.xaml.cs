@@ -10,14 +10,20 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using ProjektMobliny.Services;
 using System.Linq;
+using System.Globalization;
 
 namespace ProjektMobliny.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Geolokacja : ContentPage
     {
+        CultureInfo culture = new CultureInfo("en-US");
+        public Exception exception;
         public List<StacjeMaps> Pins { get; set; }
-        Position position;
+        public Position position;
+        public Location Location;
+        public string LatOrigin { get; set; }
+        public string LngOrigin { get; set; }
         public Geolokacja()
         {
             InitializeComponent();
@@ -33,11 +39,15 @@ namespace ProjektMobliny.Views
             Trasa();
         }
 
-        private async void Lokalizacja()
+        public async void Lokalizacja()
         {
             try
             {
                 var lokacja = await Geolocation.GetLastKnownLocationAsync();
+                 
+                LatOrigin = Convert.ToString(lokacja.Latitude, culture);            
+                LngOrigin = Convert.ToString(lokacja.Longitude, culture);
+                
                 position = new Position(lokacja.Latitude, lokacja.Longitude);
                 if (lokacja == null)
                 {
@@ -80,8 +90,7 @@ namespace ProjektMobliny.Views
    
         internal async Task<List<Position>> LoadRoute()
         {
-
-            var googleDirection = await ApiService.ServiceClientInstance.GetDirection($"49.749624981577334", $"20.73362805933699", $"49.75614033623571", $"20.748405376157468");
+            var googleDirection = await ApiService.ServiceClientInstance.GetDirection(LatOrigin, LngOrigin, $"49.63320891434197", $"20.692252999627673");
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
             {
                 var positions = Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points));
@@ -89,7 +98,7 @@ namespace ProjektMobliny.Views
             }
             else
             {
-                await DisplayAlert("Error", $"Cos jest nie tak", "OK");
+                await DisplayAlert("Error", $"Cos poszło nie tak", "OK");
                 return null;
             }
         }
