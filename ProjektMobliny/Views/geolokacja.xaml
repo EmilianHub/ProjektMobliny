@@ -1,15 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:ViewModels="clr-namespace:ProjektMobliny.ViewModels"
+             xmlns:ViewModels="clr-namespace:ProjektMobliny.ViewModels" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" 
+             xmlns:local="clr-namespace:ProjektMobliny.Views"
+             xmlns:Models="clr-namespace:ProjektMobliny.Models"
+             x:DataType="ViewModels:MainViewModel"
              Title="Geolokacja"
-             x:Class="ProjektMobliny.Views.geolokacja"
+             x:Class="ProjektMobliny.Views.Geolokacja"
              Shell.NavBarIsVisible="True">
-    <ContentPage.Content>
-        <StackLayout Padding="10">
-            <Button Text="Udostępnij lokację" Clicked ="Button_Clicked"/>
-            <Label x:Name="LabelLocation" TextColor ="Black"/>
-            <Label x:DataType="ViewModels:MainViewModel" Text="{Binding WybranastacjaCommand.Nazwa}" TextColor="Black"/>
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <ViewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3">
+            <StackLayout>
+                <Picker 
+                                Title="Wybierz stację"
+                                TitleColor="LightGray"
+                                TextColor="White"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                ItemsSource="{Binding Stacja}"
+                                SelectedItem="{Binding WybranastacjaCommand, Mode=TwoWay}"
+                                />
+                <Picker 
+                                Title="Wybierz rodzaj paliwa"
+                                TitleColor="LightGray"
+                                TextColor="White"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                ItemsSource="{Binding Stacja}"
+                                SelectedItem="{Binding WybranastacjaCommand, Mode=TwoWay}"
+                                />
+            </StackLayout>
+        </Frame>
+        <maps:Map x:DataType="local:Geolokacja" x:Name="Mapy" IsShowingUser="True">
+        </maps:Map>
+    </StackLayout>
+
+
 </ContentPage>

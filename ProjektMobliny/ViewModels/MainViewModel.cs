@@ -1,12 +1,6 @@
 ﻿using MvvmHelpers;
-using MvvmHelpers.Commands;
 using ProjektMobliny.Models;
 using ProjektMobliny.Views;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ProjektMobliny.ViewModels
@@ -24,18 +18,6 @@ namespace ProjektMobliny.ViewModels
                 new Stacje() { Id = 4, Nazwa = "Lotos", Cena95 = 6.12, Cena98 = 6.35, CenaON = 4.90, CenaLPG = 3.12 },
                 new Stacje() { Id = 5, Nazwa = "Circle", Cena95 = 6.11, Cena98 = 6.22, CenaON = 4.23, CenaLPG = 3.12 },
             };
-
-            //wybor.Title = "Wybierz stacje";
-            //wybor.ItemsSource = Stacja;
-            //Glowna.Children.Add(wybor);
-            //przycisk.Text = "Szukaj stacji";
-            //przycisk.Clicked += Przycisk_Clicked;
-            //Glowna.Children.Add(przycisk);
-            //wejscie.Keyboard = Keyboard.Text;
-            //wejscie.Placeholder = "Wybrana stacja";
-            //Glowna.Children.Add(wejscie);
-
-            
         }
 
         Stacje Wybranastacja;
@@ -45,9 +27,9 @@ namespace ProjektMobliny.ViewModels
             set
             {
                 Wybranastacja = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(Wybranastacja));
             }
         }
-        private async void OnOpenGelokacje(object ob) => await Shell.Current.GoToAsync($"//{nameof(geolokacja)}");
+        private async void OnOpenGelokacje(object ob) => await Shell.Current.GoToAsync($"//{nameof(Geolokacja)}");
     }
 }

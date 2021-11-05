@@ -83,7 +83,7 @@
     </FlyoutItem>
     
     <FlyoutItem Title="Geolokacja" Icon="GPS.png">
-        <ShellContent Route="geolokacja" ContentTemplate="{DataTemplate local:geolokacja}" />
+        <ShellContent Route="Geolokacja" ContentTemplate="{DataTemplate local:Geolokacja}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Powiadomienia" Icon="Powiadomienia.png">
