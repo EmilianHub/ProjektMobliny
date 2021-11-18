@@ -59,24 +59,23 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Frame CornerRadius="20" Margin="0,0,0,210">
+        <Frame CornerRadius="20" Margin="0,0,0,120">
             <StackLayout>
                 <Label VerticalOptions="Center"
-                           FontSize="20.9"
-                           Text="Wybierz Stacje"
+                           FontSize="18"
+                           VerticalTextAlignment="Start"
+                           Text="Insturkcja obsługi&#10;Krok 1: Przejdź do zakładki nawigacja lub kliknij przycisk poniżej&#10;Krok 2: Wybierz nazwe stacji i rodzaj paliwa, który poszukujesz&#10;Krok 3: Podążaj trasą :)"
                            HorizontalTextAlignment="Center"
                            TextColor ="Black"                       
                             />
-                <Picker 
-                            Title="Wybierz stację"
-                            TitleColor="LightGray"
-                            TextColor="Black"
-                            FontSize="Large"
-                            HorizontalTextAlignment="Center"
-                            ItemsSource="{Binding Stacja}"
-                            SelectedItem="{Binding WybranastacjaCommand, Mode=TwoWay}"
-                            />
-                <Label Text="{Binding WybranastacjaCommand.Nazwa}" TextColor="Black"/>
+                <Button VerticalOptions="Center"
+                        TextColor="WhiteSmoke"
+                        Text="Otwórz mapy"
+                        FontSize="Large"
+                        BackgroundColor="#2196F3"
+                        Clicked="OpenGeolokacje_Clicked"
+                        CornerRadius="20"
+                        />
             </StackLayout>
         </Frame>
     </StackLayout>

@@ -28,5 +28,11 @@ namespace ProjektMobliny.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
+        private void Powiadomienia_Clicked(object sender, EventArgs e)
+        {
+            base.OnAppearing();
+            _viewModel.Powiadomienia();
+        }
     }
 }

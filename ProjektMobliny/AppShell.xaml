@@ -82,14 +82,21 @@
         <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
     
-    <FlyoutItem Title="Geolokacja" Icon="GPS.png">
+    <FlyoutItem Title="Nawigacja" Icon="GPS.png">
         <ShellContent Route="Geolokacja" ContentTemplate="{DataTemplate local:Geolokacja}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kalkulator" Icon="Powiadomienia.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:PowiadomieniaPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Powiadomienia" Icon="Powiadomienia.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:PowiadomieniaPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Ustawienia" Icon="Powiadomienia.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:PowiadomieniaPage}" />
+    </FlyoutItem>
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>

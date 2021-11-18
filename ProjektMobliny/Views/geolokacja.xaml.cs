@@ -32,7 +32,7 @@ namespace ProjektMobliny.Views
             Pins = new List<StacjeMaps>()
             {
                 new StacjeMaps(){Nazwa = "Orlen", Latitude = 49.75646382302269, Longitude=20.74837194079188},
-                new StacjeMaps(){Nazwa = "Lotos", Latitude = 49.63320891434197, Longitude=20.692252999627673},
+                new StacjeMaps(){Nazwa = "Lotos", Latitude = 49.63320891434197, Longitude=20.692252999627673},           
                 new StacjeMaps(){Nazwa = "BP", Latitude = 49.63968479822199, Longitude=20.695299988939016}
             };
             LoadPins();

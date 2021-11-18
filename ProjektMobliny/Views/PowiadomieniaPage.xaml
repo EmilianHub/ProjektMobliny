@@ -9,6 +9,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem x:DataType="local:PowiadomieniaViewModel" Text="Add" Command="{Binding AddItemCommand}" />
+        <ToolbarItem Text="Notification" Clicked="Powiadomienia_Clicked"/>
     </ContentPage.ToolbarItems>
     <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.

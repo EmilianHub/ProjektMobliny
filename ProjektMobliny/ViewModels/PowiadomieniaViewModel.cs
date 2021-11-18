@@ -1,4 +1,5 @@
-﻿using ProjektMobliny.Models;
+﻿using Plugin.LocalNotification;
+using ProjektMobliny.Models;
 using ProjektMobliny.Views;
 using System;
 using System.Collections.ObjectModel;
@@ -11,7 +12,7 @@ namespace ProjektMobliny.ViewModels
     public class PowiadomieniaViewModel : BaseViewModel
     {
         private Item _selectedItem;
-
+        INavigation navigation;
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
@@ -26,7 +27,7 @@ namespace ProjektMobliny.ViewModels
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
-        }
+        }      
 
         async Task ExecuteLoadItemsCommand()
         {
@@ -79,6 +80,25 @@ namespace ProjektMobliny.ViewModels
 
             // This will push the ItemDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(PowiadomieniaDetailPage)}?{nameof(PowiadomieniaDetailViewModel.ItemId)}={item.Id}");
+        }
+
+        public void Powiadomienia()
+          {
+            var powiadomienie = new NotificationRequest
+            {
+                BadgeNumber = 1,
+                Title = "Tanie Paliwo",
+                Subtitle = $"{DateTime.Now}",
+                Description = "Zmiany w świecie paliwa",
+                ReturningData = "Od dziś ważna zmiana na wszyskich stacjach...",
+                NotificationId = 1,
+                Silent = true,
+                Schedule =
+                {
+                    NotifyTime = DateTime.Now.AddSeconds(5) // Do testów wywołanie powiadomienie bo 5 sekundach
+                },                
+            };
+            NotificationCenter.Current.Show(powiadomienie);
         }
     }
 }

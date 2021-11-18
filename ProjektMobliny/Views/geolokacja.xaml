@@ -22,8 +22,7 @@
                                 TextColor="White"
                                 FontSize="Large"
                                 HorizontalTextAlignment="Center"
-                                ItemsSource="{Binding Stacja}"
-                                SelectedItem="{Binding WybranastacjaCommand, Mode=TwoWay}"
+                                ItemsSource="{Binding Stacja}"                              
                                 />
                 <Picker 
                                 Title="Wybierz rodzaj paliwa"
@@ -32,7 +31,6 @@
                                 FontSize="Large"
                                 HorizontalTextAlignment="Center"
                                 ItemsSource="{Binding Stacja}"
-                                SelectedItem="{Binding WybranastacjaCommand, Mode=TwoWay}"
                                 />
             </StackLayout>
         </Frame>

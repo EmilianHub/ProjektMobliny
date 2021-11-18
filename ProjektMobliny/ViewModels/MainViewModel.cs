@@ -18,18 +18,6 @@ namespace ProjektMobliny.ViewModels
                 new Stacje() { Id = 4, Nazwa = "Lotos", Cena95 = 6.12, Cena98 = 6.35, CenaON = 4.90, CenaLPG = 3.12 },
                 new Stacje() { Id = 5, Nazwa = "Circle", Cena95 = 6.11, Cena98 = 6.22, CenaON = 4.23, CenaLPG = 3.12 },
             };
-        }
-
-        Stacje Wybranastacja;
-        public Stacje WybranastacjaCommand
-        {
-            get => Wybranastacja;
-            set
-            {
-                Wybranastacja = value;
-                OnPropertyChanged(nameof(Wybranastacja));
-            }
-        }
-        private async void OnOpenGelokacje(object ob) => await Shell.Current.GoToAsync($"//{nameof(Geolokacja)}");
+        }               
     }
 }

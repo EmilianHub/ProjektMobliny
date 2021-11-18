@@ -14,6 +14,11 @@ namespace ProjektMobliny.Views
         {
             InitializeComponent();
             this.BindingContext = new MainViewModel();
-        }  
+        }     
+
+        private void OpenGeolokacje_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Geolokacja());
+        }
     }
 }
