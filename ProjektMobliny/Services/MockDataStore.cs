@@ -14,8 +14,8 @@ namespace ProjektMobliny.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Paliwo coraz droższe", Description="Kierowcy są zdruzgotani paliwo wciąż rośnie", Czas = "18.11.2021"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Ceny powyżej 6 zł", Description="Pozdrawiam", Czas = "28.11.2021"},
             };
         }
 
@@ -48,7 +48,7 @@ namespace ProjektMobliny.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = true)
         {
             return await Task.FromResult(items);
         }

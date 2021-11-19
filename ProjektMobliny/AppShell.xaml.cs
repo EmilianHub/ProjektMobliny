@@ -13,6 +13,7 @@ namespace ProjektMobliny
             InitializeComponent();
             Routing.RegisterRoute(nameof(PowiadomieniaDetailPage), typeof(PowiadomieniaDetailPage));
             Routing.RegisterRoute(nameof(NewPowiadomieniaPage), typeof(NewPowiadomieniaPage));
+            Routing.RegisterRoute(nameof(PowiadomieniaViewModel), typeof(PowiadomieniaViewModel));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

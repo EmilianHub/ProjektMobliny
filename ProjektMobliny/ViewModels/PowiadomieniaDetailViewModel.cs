@@ -12,6 +12,7 @@ namespace ProjektMobliny.ViewModels
         private string itemId;
         private string text;
         private string description;
+        private string czas;
         public string Id { get; set; }
 
         public string Text
@@ -24,6 +25,12 @@ namespace ProjektMobliny.ViewModels
         {
             get => description;
             set => SetProperty(ref description, value);
+        }
+
+        public string Czas
+        {
+            get => czas;
+            set => SetProperty(ref czas, value);
         }
 
         public string ItemId
@@ -47,6 +54,7 @@ namespace ProjektMobliny.ViewModels
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
+                Czas = item.Czas;
             }
             catch (Exception)
             {

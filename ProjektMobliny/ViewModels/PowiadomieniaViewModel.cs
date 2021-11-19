@@ -10,23 +10,24 @@ using Xamarin.Forms;
 namespace ProjektMobliny.ViewModels
 {
     public class PowiadomieniaViewModel : BaseViewModel
-    {
+    {       
         private Item _selectedItem;
-        INavigation navigation;
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<Item> DeleteItemCommand { get; }
+        public Command<Item> ItemTapped { get; }       
 
         public PowiadomieniaViewModel()
         {
-            Title = "Powiadomienia";
+            Title = "Powiadomienia";        
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
+            DeleteItemCommand = new Command<Item>(OnDelete);
         }      
 
         async Task ExecuteLoadItemsCommand()
@@ -71,7 +72,7 @@ namespace ProjektMobliny.ViewModels
         private async void OnAddItem(object obj)
         {
             await Shell.Current.GoToAsync(nameof(NewPowiadomieniaPage));
-        }
+        }     
 
         async void OnItemSelected(Item item)
         {
@@ -82,7 +83,14 @@ namespace ProjektMobliny.ViewModels
             await Shell.Current.GoToAsync($"{nameof(PowiadomieniaDetailPage)}?{nameof(PowiadomieniaDetailViewModel.ItemId)}={item.Id}");
         }
 
-        public void Powiadomienia()
+        private async void OnDelete(Item item)
+        {
+            if (item == null)
+                return;
+            await DataStore.DeleteItemAsync(item.Id);
+        }
+
+        public async void Powiadomienia()
           {
             var powiadomienie = new NotificationRequest
             {
@@ -98,7 +106,23 @@ namespace ProjektMobliny.ViewModels
                     NotifyTime = DateTime.Now.AddSeconds(5) // Do testów wywołanie powiadomienie bo 5 sekundach
                 },                
             };
-            NotificationCenter.Current.Show(powiadomienie);
+            try
+            {
+                Item newItem = new Item()
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Text = powiadomienie.Description,
+                    Description = powiadomienie.ReturningData,
+                    Czas = $"{DateTime.Now}",
+                };
+
+                await DataStore.AddItemAsync(newItem);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"{e.Message}");
+            }                      
+            await NotificationCenter.Current.Show(powiadomienie);
         }
     }
 }

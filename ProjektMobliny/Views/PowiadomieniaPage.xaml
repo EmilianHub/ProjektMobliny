@@ -18,28 +18,43 @@
     <RefreshView x:DataType="local:PowiadomieniaViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" RefreshColor="Red">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
-                SelectionMode="None">
+                SelectionMode="None"
+                        >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Item">
-                        <Label Text="{Binding Text}" 
+                    <SwipeView BackgroundColor="White">
+                        <Frame Margin="1">
+                            <StackLayout x:DataType="model:Item">
+                                <Label Text="{Binding Text}" 
                             TextColor="Black"
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" />
-                        <Label Text="{Binding Description}" 
+                                <Label Text="{Binding Description}" 
                             TextColor="Black"   
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer 
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:PowiadomieniaViewModel}}, Path=ItemTapped}"		
                                 CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Frame>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="OrangeRed"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type local:PowiadomieniaViewModel}}, Path=DeleteItemCommand}"
+                                           x:DataType="model:Item"
+                                           CommandParameter="{Binding .}"
+                                           />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                    </SwipeView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

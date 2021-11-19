@@ -4,11 +4,13 @@
              x:Class="ProjektMobliny.Views.PowiadomieniaDetailPage"
              Title="{Binding Title}">
 
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" TextColor="Black" FontSize="Medium" />
+    <StackLayout Spacing="10" Padding="5">
+        <Label Text="Nagłówek:" TextColor="Black" FontSize="Medium" />
         <Label Text="{Binding Text}" TextColor="Black" FontSize="Small"/>
-        <Label Text="Description:" TextColor="Black" FontSize="Medium" />
+        <Label Text="Opis:" TextColor="Black" FontSize="Medium" />
         <Label Text="{Binding Description}" TextColor="Black" FontSize="Small"/>
+        <Label Text="Data:" TextColor="Black" FontSize="Medium" />
+        <Label Text="{Binding Czas}" TextColor="Black" FontSize="Small"/>
     </StackLayout>
     
 </ContentPage>
