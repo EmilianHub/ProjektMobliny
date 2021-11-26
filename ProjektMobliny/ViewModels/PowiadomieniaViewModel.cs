@@ -2,6 +2,7 @@
 using ProjektMobliny.Models;
 using ProjektMobliny.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -16,8 +17,10 @@ namespace ProjektMobliny.ViewModels
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<Item> DeleteItemCommand { get; }
-        public Command<Item> ItemTapped { get; }       
-
+        public Command<Item> ItemTapped { get; }
+        private readonly List<Item> Wiadomosci; //do usunięcia potem
+        private readonly Random rnd = new Random();
+        private static int i = 1;
         public PowiadomieniaViewModel()
         {
             Title = "Powiadomienia";        
@@ -28,6 +31,13 @@ namespace ProjektMobliny.ViewModels
 
             AddItemCommand = new Command(OnAddItem);
             DeleteItemCommand = new Command<Item>(OnDelete);
+
+            Wiadomosci = new List<Item>()
+            {
+                new Item { Text = "Rząd bierze się za ceny paliwa", Description="Branża mówi o sporym ryzuku - nafta"},
+                new Item { Text = "Na mapie Polski wyróżnia sie Wielkopolska", Description="Podwyżki detalicznych cen paliw zdają się nie mieć końca, a do widoku ponad 6 złotych za litr benzyny"},
+                new Item { Text = "Warszawa, wyciek paliwa z tira", Description="Do zdarzenia doszło po godzinie 4, na Czerniakowskiej, na wysokości Krajowego Rejestru Karnego."},
+            };
         }      
 
         async Task ExecuteLoadItemsCommand()
@@ -88,22 +98,23 @@ namespace ProjektMobliny.ViewModels
             if (item == null)
                 return;
             await DataStore.DeleteItemAsync(item.Id);
+            await ExecuteLoadItemsCommand();
         }
 
         public async void Powiadomienia()
-          {
+          {           
+            int los = rnd.Next(2);
             var powiadomienie = new NotificationRequest
             {
                 BadgeNumber = 1,
                 Title = "Tanie Paliwo",
                 Subtitle = $"{DateTime.Now}",
-                Description = "Zmiany w świecie paliwa",
-                ReturningData = "Od dziś ważna zmiana na wszyskich stacjach...",
-                NotificationId = 1,
-                Silent = true,
+                Description = Wiadomosci[los].Text,
+                ReturningData = Wiadomosci[los].Description,
+                NotificationId = i++,
                 Schedule =
                 {
-                    NotifyTime = DateTime.Now.AddSeconds(5) // Do testów wywołanie powiadomienie bo 5 sekundach
+                    NotifyTime = DateTime.Now.AddSeconds(3) // Do testów wywołanie powiadomienie bo 3 sekundach
                 },                
             };
             try
@@ -123,6 +134,7 @@ namespace ProjektMobliny.ViewModels
                 Console.WriteLine($"{e.Message}");
             }                      
             await NotificationCenter.Current.Show(powiadomienie);
+            await ExecuteLoadItemsCommand();
         }
     }
 }

@@ -22477,9 +22477,6 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0700AF
 			public const int ustawienia = 2131165359;
 			
-			// aapt resource value: 0x7F0700B0
-			public const int xamarin_logo = 2131165360;
-			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -24634,7 +24631,10 @@ namespace ProjektMobliny.Droid
 			public const int icon_round = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int launcher_foreground = 2131492866;
+			public const int Ikona = 2131492866;
+			
+			// aapt resource value: 0x7F0C0003
+			public const int launcher_foreground = 2131492867;
 			
 			static Mipmap()
 			{
