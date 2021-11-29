@@ -5843,7 +5843,13 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.EnterFromRight = global::ProjektMobliny.Droid.Resource.Animation.EnterFromRight;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.ExitToLeft = global::ProjektMobliny.Droid.Resource.Animation.ExitToLeft;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.ExitToRight = global::ProjektMobliny.Droid.Resource.Animation.ExitToRight;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_close_enter = global::ProjektMobliny.Droid.Resource.Animation.fragment_close_enter;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_close_exit = global::ProjektMobliny.Droid.Resource.Animation.fragment_close_exit;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_fade_enter = global::ProjektMobliny.Droid.Resource.Animation.fragment_fade_enter;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_fade_exit = global::ProjektMobliny.Droid.Resource.Animation.fragment_fade_exit;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_fast_out_extra_slow_in = global::ProjektMobliny.Droid.Resource.Animation.fragment_fast_out_extra_slow_in;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_open_enter = global::ProjektMobliny.Droid.Resource.Animation.fragment_open_enter;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.fragment_open_exit = global::ProjektMobliny.Droid.Resource.Animation.fragment_open_exit;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.mtrl_bottom_sheet_slide_in = global::ProjektMobliny.Droid.Resource.Animation.mtrl_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.mtrl_bottom_sheet_slide_out = global::ProjektMobliny.Droid.Resource.Animation.mtrl_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.mtrl_card_lowers_interpolator = global::ProjektMobliny.Droid.Resource.Animation.mtrl_card_lowers_interpolator;
@@ -6899,6 +6905,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.yearStyle = global::ProjektMobliny.Droid.Resource.Attribute.yearStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.yearTodayStyle = global::ProjektMobliny.Droid.Resource.Attribute.yearTodayStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::ProjektMobliny.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Forms.Platform.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::ProjektMobliny.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
 			global::Xamarin.Forms.Platform.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ProjektMobliny.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
 			global::Xamarin.Forms.Platform.Android.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::ProjektMobliny.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ProjektMobliny.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
@@ -7043,6 +7050,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_card_view_ripple = global::ProjektMobliny.Droid.Resource.Color.mtrl_card_view_ripple;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_chip_background_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_background_color;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_chip_close_icon_tint = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_chip_ripple_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_ripple_color;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_chip_surface_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_surface_color;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_chip_text_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_text_color;
 			global::Xamarin.Forms.Platform.Android.Resource.Color.mtrl_choice_chip_background_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_choice_chip_background_color;
@@ -7564,6 +7572,12 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_search_api_material = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_star_black_16dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_star_black_36dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_star_black_48dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_star_half_black_48dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_ic_voice_search_api_material = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_item_background_holo_dark = global::ProjektMobliny.Droid.Resource.Drawable.abc_item_background_holo_dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_item_background_holo_light = global::ProjektMobliny.Droid.Resource.Drawable.abc_item_background_holo_light;
@@ -7620,6 +7634,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::ProjektMobliny.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_on_mtrl = global::ProjektMobliny.Droid.Resource.Drawable.btn_radio_on_mtrl;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::ProjektMobliny.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_bottom_navigation_item_background = global::ProjektMobliny.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_fab_background = global::ProjektMobliny.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_ic_visibility = global::ProjektMobliny.Droid.Resource.Drawable.design_ic_visibility;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_ic_visibility_off = global::ProjektMobliny.Droid.Resource.Drawable.design_ic_visibility_off;
@@ -8046,6 +8061,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.skipped = global::ProjektMobliny.Droid.Resource.Id.skipped;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.slide = global::ProjektMobliny.Droid.Resource.Id.slide;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.sliding_tabs = global::ProjektMobliny.Droid.Resource.Id.sliding_tabs;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.smallLabel = global::ProjektMobliny.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snackbar_action = global::ProjektMobliny.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snackbar_text = global::ProjektMobliny.Droid.Resource.Id.snackbar_text;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snap = global::ProjektMobliny.Droid.Resource.Id.snap;
@@ -8858,6 +8874,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light_BottomSheetDialog = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light_BottomSheetDialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered;
@@ -9451,7 +9468,18 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets = global::ProjektMobliny.Droid.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets = global::ProjektMobliny.Droid.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_backgroundTint = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_backgroundTint;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_elevation = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemBackground = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemIconSize = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemIconTint = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemRippleColor = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemRippleColor;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_itemTextColor = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomNavigationView_menu = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_menu;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout = global::ProjektMobliny.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation = global::ProjektMobliny.Droid.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.BottomSheetBehavior_Layout_android_maxWidth = global::ProjektMobliny.Droid.Resource.Styleable.BottomSheetBehavior_Layout_android_maxWidth;
@@ -11130,7 +11158,13 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Animation.EnterFromRight = global::ProjektMobliny.Droid.Resource.Animation.EnterFromRight;
 			global::Xamarin.Forms.Platform.Resource.Animation.ExitToLeft = global::ProjektMobliny.Droid.Resource.Animation.ExitToLeft;
 			global::Xamarin.Forms.Platform.Resource.Animation.ExitToRight = global::ProjektMobliny.Droid.Resource.Animation.ExitToRight;
+			global::Xamarin.Forms.Platform.Resource.Animation.fragment_close_enter = global::ProjektMobliny.Droid.Resource.Animation.fragment_close_enter;
+			global::Xamarin.Forms.Platform.Resource.Animation.fragment_close_exit = global::ProjektMobliny.Droid.Resource.Animation.fragment_close_exit;
+			global::Xamarin.Forms.Platform.Resource.Animation.fragment_fade_enter = global::ProjektMobliny.Droid.Resource.Animation.fragment_fade_enter;
+			global::Xamarin.Forms.Platform.Resource.Animation.fragment_fade_exit = global::ProjektMobliny.Droid.Resource.Animation.fragment_fade_exit;
 			global::Xamarin.Forms.Platform.Resource.Animation.fragment_fast_out_extra_slow_in = global::ProjektMobliny.Droid.Resource.Animation.fragment_fast_out_extra_slow_in;
+			global::Xamarin.Forms.Platform.Resource.Animation.fragment_open_enter = global::ProjektMobliny.Droid.Resource.Animation.fragment_open_enter;
+			global::Xamarin.Forms.Platform.Resource.Animation.fragment_open_exit = global::ProjektMobliny.Droid.Resource.Animation.fragment_open_exit;
 			global::Xamarin.Forms.Platform.Resource.Animation.mtrl_bottom_sheet_slide_in = global::ProjektMobliny.Droid.Resource.Animation.mtrl_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Resource.Animation.mtrl_bottom_sheet_slide_out = global::ProjektMobliny.Droid.Resource.Animation.mtrl_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Resource.Animation.mtrl_card_lowers_interpolator = global::ProjektMobliny.Droid.Resource.Animation.mtrl_card_lowers_interpolator;
@@ -12186,6 +12220,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.yearStyle = global::ProjektMobliny.Droid.Resource.Attribute.yearStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.yearTodayStyle = global::ProjektMobliny.Droid.Resource.Attribute.yearTodayStyle;
 			global::Xamarin.Forms.Platform.Resource.Boolean.abc_action_bar_embed_tabs = global::ProjektMobliny.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Forms.Platform.Resource.Boolean.abc_allow_stacked_button_bar = global::ProjektMobliny.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
 			global::Xamarin.Forms.Platform.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ProjektMobliny.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
 			global::Xamarin.Forms.Platform.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::ProjektMobliny.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
 			global::Xamarin.Forms.Platform.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ProjektMobliny.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
@@ -12330,6 +12365,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Color.mtrl_card_view_ripple = global::ProjektMobliny.Droid.Resource.Color.mtrl_card_view_ripple;
 			global::Xamarin.Forms.Platform.Resource.Color.mtrl_chip_background_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_background_color;
 			global::Xamarin.Forms.Platform.Resource.Color.mtrl_chip_close_icon_tint = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Xamarin.Forms.Platform.Resource.Color.mtrl_chip_ripple_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_ripple_color;
 			global::Xamarin.Forms.Platform.Resource.Color.mtrl_chip_surface_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_surface_color;
 			global::Xamarin.Forms.Platform.Resource.Color.mtrl_chip_text_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_chip_text_color;
 			global::Xamarin.Forms.Platform.Resource.Color.mtrl_choice_chip_background_color = global::ProjektMobliny.Droid.Resource.Color.mtrl_choice_chip_background_color;
@@ -12851,6 +12887,12 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_search_api_material = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_star_black_16dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_star_black_36dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_star_black_48dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_star_half_black_16dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_star_half_black_36dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_star_half_black_48dp = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_ic_voice_search_api_material = global::ProjektMobliny.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_item_background_holo_dark = global::ProjektMobliny.Droid.Resource.Drawable.abc_item_background_holo_dark;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_item_background_holo_light = global::ProjektMobliny.Droid.Resource.Drawable.abc_item_background_holo_light;
@@ -12907,6 +12949,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::ProjektMobliny.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
 			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_on_mtrl = global::ProjektMobliny.Droid.Resource.Drawable.btn_radio_on_mtrl;
 			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::ProjektMobliny.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.design_bottom_navigation_item_background = global::ProjektMobliny.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_fab_background = global::ProjektMobliny.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_ic_visibility = global::ProjektMobliny.Droid.Resource.Drawable.design_ic_visibility;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_ic_visibility_off = global::ProjektMobliny.Droid.Resource.Drawable.design_ic_visibility_off;
@@ -13333,6 +13376,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.skipped = global::ProjektMobliny.Droid.Resource.Id.skipped;
 			global::Xamarin.Forms.Platform.Resource.Id.slide = global::ProjektMobliny.Droid.Resource.Id.slide;
 			global::Xamarin.Forms.Platform.Resource.Id.sliding_tabs = global::ProjektMobliny.Droid.Resource.Id.sliding_tabs;
+			global::Xamarin.Forms.Platform.Resource.Id.smallLabel = global::ProjektMobliny.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Platform.Resource.Id.snackbar_action = global::ProjektMobliny.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Platform.Resource.Id.snackbar_text = global::ProjektMobliny.Droid.Resource.Id.snackbar_text;
 			global::Xamarin.Forms.Platform.Resource.Id.snap = global::ProjektMobliny.Droid.Resource.Id.snap;
@@ -14145,6 +14189,7 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert_Framework;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_Light_BottomSheetDialog = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light_BottomSheetDialog;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = global::ProjektMobliny.Droid.Resource.Style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered;
@@ -14738,7 +14783,18 @@ namespace ProjektMobliny.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets = global::ProjektMobliny.Droid.Resource.Styleable.BottomAppBar_paddingLeftSystemWindowInsets;
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets = global::ProjektMobliny.Droid.Resource.Styleable.BottomAppBar_paddingRightSystemWindowInsets;
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_backgroundTint = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_backgroundTint;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_elevation = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemBackground = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemIconSize = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemIconTint = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemRippleColor = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemRippleColor;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_itemTextColor = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Xamarin.Forms.Platform.Resource.Styleable.BottomNavigationView_menu = global::ProjektMobliny.Droid.Resource.Styleable.BottomNavigationView_menu;
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomSheetBehavior_Layout = global::ProjektMobliny.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation = global::ProjektMobliny.Droid.Resource.Styleable.BottomSheetBehavior_Layout_android_elevation;
 			global::Xamarin.Forms.Platform.Resource.Styleable.BottomSheetBehavior_Layout_android_maxWidth = global::ProjektMobliny.Droid.Resource.Styleable.BottomSheetBehavior_Layout_android_maxWidth;
@@ -16510,6 +16566,12 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F010027
 			public const int nav_default_pop_exit_anim = 2130772007;
 			
+			// aapt resource value: 0x7F010028
+			public const int mtrl_bottom_sheet_slide_out = 2130772008;
+			
+			// aapt resource value: 0x7F010029
+			public const int mtrl_card_lowers_interpolator = 2130772009;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -16625,6 +16687,15 @@ namespace ProjektMobliny.Droid
 		
 		public partial class Attribute
 		{
+			
+			// aapt resource value: 0x7F030000
+			public const int actionBarDivider = 2130903040;
+			
+			// aapt resource value: 0x7F030001
+			public const int actionBarItemBackground = 2130903041;
+			
+			// aapt resource value: 0x7F030002
+			public const int actionBarPopupTheme = 2130903042;
 			
 			// aapt resource value: 0x7F030003
 			public const int action = 2130903043;
@@ -16851,6 +16922,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F03004D
 			public const int backgroundInsetTop = 2130903117;
 			
+			// aapt resource value: 0x7F03004F
+			public const int borderlessButtonStyle = 2130903119;
+			
 			// aapt resource value: 0x7F03004E
 			public const int backgroundOverlayColorAlpha = 2130903118;
 			
@@ -16934,6 +17008,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F030068
 			public const int borderWidth = 2130903144;
+			
+			// aapt resource value: 0x7F030069
+			public const int buttonStyleSmall = 2130903145;
 			
 			// aapt resource value: 0x7F03006A
 			public const int bottomAppBarStyle = 2130903146;
@@ -17085,6 +17162,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F03009B
 			public const int carousel_infinite = 2130903195;
 			
+			// aapt resource value: 0x7F030099
+			public const int collapseIcon = 2130903193;
+			
 			// aapt resource value: 0x7F03009C
 			public const int carousel_nextState = 2130903196;
 			
@@ -17202,6 +17282,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0300C2
 			public const int circleRadius = 2130903234;
 			
+			// aapt resource value: 0x7F0300C3
+			public const int cornerFamily = 2130903235;
+			
 			// aapt resource value: 0x7F0300C4
 			public const int circularflow_angles = 2130903236;
 			
@@ -17264,6 +17347,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0300D7
 			public const int collapseContentDescription = 2130903255;
+			
+			// aapt resource value: 0x7F0300D8
+			public const int dayTodayStyle = 2130903256;
 			
 			// aapt resource value: 0x7F0300D9
 			public const int collapsedSize = 2130903257;
@@ -18456,6 +18542,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F030262
 			public const int lineSpacing = 2130903650;
 			
+			// aapt resource value: 0x7F030263
+			public const int tintMode = 2130903651;
+			
 			// aapt resource value: 0x7F030264
 			public const int listChoiceBackgroundIndicator = 2130903652;
 			
@@ -18470,6 +18559,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F030268
 			public const int listItemLayout = 2130903656;
+			
+			// aapt resource value: 0x7F03026B
+			public const int titleMargins = 2130903659;
 			
 			// aapt resource value: 0x7F030269
 			public const int listLayout = 2130903657;
@@ -20402,6 +20494,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F05008F
 			public const int material_timepicker_button_stroke = 2131034255;
 			
+			// aapt resource value: 0x7F050090
+			public const int mtrl_card_view_foreground = 2131034256;
+			
 			// aapt resource value: 0x7F050091
 			public const int material_timepicker_clockface = 2131034257;
 			
@@ -20513,6 +20608,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0500B4
 			public const int mtrl_navigation_item_text_color = 2131034292;
 			
+			// aapt resource value: 0x7F0500AF
+			public const int mtrl_text_btn_text_color_selector = 2131034287;
+			
 			// aapt resource value: 0x7F0500B5
 			public const int mtrl_on_primary_text_btn_text_color_selector = 2131034293;
 			
@@ -20545,6 +20643,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0500BF
 			public const int mtrl_tabs_ripple_color = 2131034303;
+			
+			// aapt resource value: 0x7F0500C0
+			public const int radiobutton_themeable_attribute_color = 2131034304;
 			
 			// aapt resource value: 0x7F0500C1
 			public const int mtrl_textinput_default_box_stroke_color = 2131034305;
@@ -20940,6 +21041,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F06005B
 			public const int compat_button_padding_horizontal_material = 2131099739;
 			
+			// aapt resource value: 0x7F06005D
+			public const int default_dimension = 2131099741;
+			
 			// aapt resource value: 0x7F06005C
 			public const int compat_button_padding_vertical_material = 2131099740;
 			
@@ -20951,6 +21055,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F06005F
 			public const int compat_notification_large_icon_max_width = 2131099743;
+			
+			// aapt resource value: 0x7F060060
+			public const int design_bottom_navigation_active_item_min_width = 2131099744;
 			
 			// aapt resource value: 0x7F060061
 			public const int default_dimension = 2131099745;
@@ -21225,6 +21332,12 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0600BA
 			public const int material_input_text_to_prefix_suffix_padding = 2131099834;
 			
+			// aapt resource value: 0x7F0600BB
+			public const int mtrl_btn_letter_spacing = 2131099835;
+			
+			// aapt resource value: 0x7F0600BC
+			public const int mtrl_btn_padding_bottom = 2131099836;
+			
 			// aapt resource value: 0x7F0600BD
 			public const int material_textinput_default_width = 2131099837;
 			
@@ -21272,6 +21385,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0600CA
 			public const int mtrl_badge_radius = 2131099850;
+			
+			// aapt resource value: 0x7F0600D1
+			public const int mtrl_calendar_days_of_week_height = 2131099857;
 			
 			// aapt resource value: 0x7F0600CB
 			public const int mtrl_badge_text_horizontal_edge_offset = 2131099851;
@@ -22342,6 +22458,12 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F070080
 			public const int ic_mtrl_chip_close_circle = 2131165312;
 			
+			// aapt resource value: 0x7F070081
+			public const int mtrl_tabs_default_indicator = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int navigation_empty_icon = 2131165314;
+			
 			// aapt resource value: 0x7F070083
 			public const int kalkulator = 2131165315;
 			
@@ -22490,6 +22612,18 @@ namespace ProjektMobliny.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7F08000A
+			public const int accessibility_action_clickable_span = 2131230730;
+			
+			// aapt resource value: 0x7F08000B
+			public const int accessibility_custom_action_0 = 2131230731;
+			
+			// aapt resource value: 0x7F08000C
+			public const int accessibility_custom_action_1 = 2131230732;
+			
+			// aapt resource value: 0x7F08000D
+			public const int accessibility_custom_action_10 = 2131230733;
+			
 			// aapt resource value: 0x7F08000E
 			public const int accelerate = 2131230734;
 			
@@ -22580,6 +22714,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F08002B
 			public const int accessibility_custom_action_5 = 2131230763;
 			
+			// aapt resource value: 0x7F08003D
+			public const int actions = 2131230781;
+			
 			// aapt resource value: 0x7F08002C
 			public const int accessibility_custom_action_6 = 2131230764;
 			
@@ -22649,6 +22786,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F080041
 			public const int action_mode_bar = 2131230785;
 			
+			// aapt resource value: 0x7F080000
+			public const int ALT = 2131230720;
+			
 			// aapt resource value: 0x7F080042
 			public const int action_mode_bar_stub = 2131230786;
 			
@@ -22657,6 +22797,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F080044
 			public const int action_text = 2131230788;
+			
+			// aapt resource value: 0x7F080045
+			public const int beginning = 2131230789;
 			
 			// aapt resource value: 0x7F080046
 			public const int activity_chooser_view_content = 2131230790;
@@ -22670,8 +22813,17 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F080049
 			public const int adjust_width = 2131230793;
 			
+			// aapt resource value: 0x7F080001
+			public const int BOTTOM_END = 2131230721;
+			
+			// aapt resource value: 0x7F080002
+			public const int BOTTOM_START = 2131230722;
+			
 			// aapt resource value: 0x7F08004A
 			public const int alertTitle = 2131230794;
+			
+			// aapt resource value: 0x7F08004D
+			public const int browser_actions_menu_items = 2131230797;
 			
 			// aapt resource value: 0x7F08004B
 			public const int aligned = 2131230795;
@@ -22693,6 +22845,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F080050
 			public const int animateToStart = 2131230800;
+			
+			// aapt resource value: 0x7F080051
+			public const int cancel_button = 2131230801;
 			
 			// aapt resource value: 0x7F080052
 			public const int anticipate = 2131230802;
@@ -22726,6 +22881,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F08005B
 			public const int baseline = 2131230811;
+			
+			// aapt resource value: 0x7F08005C
+			public const int chronometer = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
 			public const int beginning = 2131230813;
@@ -22763,6 +22921,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F080065
 			public const int bounceEnd = 2131230821;
 			
+			// aapt resource value: 0x7F080003
+			public const int CTRL = 2131230723;
+			
 			// aapt resource value: 0x7F080066
 			public const int bounceStart = 2131230822;
 			
@@ -22777,6 +22938,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F080069
 			public const int browser_actions_menu_item_text = 2131230825;
+			
+			// aapt resource value: 0x7F08006A
+			public const int decor_content_parent = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
 			public const int browser_actions_menu_view = 2131230827;
@@ -22823,6 +22987,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F080079
 			public const int chip1 = 2131230841;
 			
+			// aapt resource value: 0x7F08007B
+			public const int expanded_menu = 2131230843;
+			
 			// aapt resource value: 0x7F08007A
 			public const int chip2 = 2131230842;
 			
@@ -22834,6 +23001,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F08007D
 			public const int chronometer = 2131230845;
+			
+			// aapt resource value: 0x7F080080
+			public const int filled = 2131230848;
 			
 			// aapt resource value: 0x7F08007E
 			public const int circle_center = 2131230846;
@@ -22861,6 +23031,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F080086
 			public const int constraint = 2131230854;
+			
+			// aapt resource value: 0x7F080004
+			public const int FUNCTION = 2131230724;
 			
 			// aapt resource value: 0x7F080087
 			public const int container = 2131230855;
@@ -22952,6 +23125,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0800A3
 			public const int disableHome = 2131230883;
 			
+			// aapt resource value: 0x7F080005
+			public const int META = 2131230725;
+			
 			// aapt resource value: 0x7F0800A4
 			public const int disableIntraAutoTransition = 2131230884;
 			
@@ -22975,6 +23151,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0800AB
 			public const int dragEnd = 2131230891;
+			
+			// aapt resource value: 0x7F0800AD
+			public const int mtrl_calendar_days_of_week = 2131230893;
 			
 			// aapt resource value: 0x7F0800AC
 			public const int dragLeft = 2131230892;
@@ -23027,6 +23206,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0800BC
 			public const int exitUntilCollapsed = 2131230908;
 			
+			// aapt resource value: 0x7F0800BD
+			public const int mtrl_picker_text_input_date = 2131230909;
+			
 			// aapt resource value: 0x7F0800BE
 			public const int expanded_menu = 2131230910;
 			
@@ -23056,6 +23238,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0800C6
 			public const int flip = 2131230918;
+			
+			// aapt resource value: 0x7F0800C4
+			public const int noScroll = 2131230916;
 			
 			// aapt resource value: 0x7F0800C7
 			public const int floating = 2131230919;
@@ -23089,6 +23274,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0800D0
 			public const int graph_wrap = 2131230928;
+			
+			// aapt resource value: 0x7F0800D1
+			public const int peekHeight = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
 			public const int grouping = 2131230930;
@@ -23135,6 +23323,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0800DF
 			public const int icon_only = 2131230943;
 			
+			// aapt resource value: 0x7F0800E3
+			public const int scrollable = 2131230947;
+			
 			// aapt resource value: 0x7F0800E0
 			public const int ifRoom = 2131230944;
 			
@@ -23177,6 +23368,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0800ED
 			public const int labeled = 2131230957;
 			
+			// aapt resource value: 0x7F0800EF
+			public const int selected = 2131230959;
+			
 			// aapt resource value: 0x7F0800EE
 			public const int layout = 2131230958;
 			
@@ -23188,6 +23382,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0800F1
 			public const int legacy = 2131230961;
+			
+			// aapt resource value: 0x7F080006
+			public const int SHIFT = 2131230726;
 			
 			// aapt resource value: 0x7F0800F2
 			public const int light = 2131230962;
@@ -24341,6 +24538,12 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0B0038
 			public const int material_clock_period_toggle_land = 2131427384;
 			
+			// aapt resource value: 0x7F0B003A
+			public const int mtrl_calendar_days_of_week = 2131427386;
+			
+			// aapt resource value: 0x7F0B0039
+			public const int mtrl_calendar_day_of_week = 2131427385;
+			
 			// aapt resource value: 0x7F0B003B
 			public const int material_radial_view_group = 2131427387;
 			
@@ -24349,6 +24552,12 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0B003F
 			public const int material_timepicker = 2131427391;
+			
+			// aapt resource value: 0x7F0B003D
+			public const int mtrl_calendar_month_labeled = 2131427389;
+			
+			// aapt resource value: 0x7F0B003E
+			public const int mtrl_calendar_month_navigation = 2131427390;
 			
 			// aapt resource value: 0x7F0B0040
 			public const int material_timepicker_dialog = 2131427392;
@@ -24383,6 +24592,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0B0048
 			public const int mtrl_calendar_day = 2131427400;
 			
+			// aapt resource value: 0x7F0B0049
+			public const int mtrl_picker_header_selection_text = 2131427401;
+			
 			// aapt resource value: 0x7F0B004A
 			public const int mtrl_calendar_days_of_week = 2131427402;
 			
@@ -24403,6 +24615,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0B004E
 			public const int mtrl_calendar_month_navigation = 2131427406;
+			
+			// aapt resource value: 0x7F0B004F
+			public const int notification_action_tombstone = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
 			public const int mtrl_calendar_vertical = 2131427408;
@@ -24490,6 +24705,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0B006C
 			public const int notification_template_part_chronometer = 2131427436;
+			
+			// aapt resource value: 0x7F0B0071
+			public const int text_view_without_line_height = 2131427441;
 			
 			// aapt resource value: 0x7F0B006D
 			public const int notification_template_part_time = 2131427437;
@@ -24754,6 +24972,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0E001C
 			public const int bottom_sheet_behavior = 2131623964;
+			
+			// aapt resource value: 0x7F0E001D
+			public const int character_counter_content_description = 2131623965;
 			
 			// aapt resource value: 0x7F0E001E
 			public const int character_counter_content_description = 2131623966;
@@ -25506,6 +25727,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0F0089
 			public const int Base_V21_Theme_MaterialComponents_Light_Dialog = 2131689609;
 			
+			// aapt resource value: 0x7F0F008B
+			public const int Base_V22_Theme_AppCompat_Light = 2131689611;
+			
 			// aapt resource value: 0x7F0F008C
 			public const int Base_V22_Theme_AppCompat = 2131689612;
 			
@@ -25527,6 +25751,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0F0092
 			public const int Base_V26_Widget_AppCompat_Toolbar = 2131689618;
 			
+			// aapt resource value: 0x7F0F0097
+			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131689623;
+			
 			// aapt resource value: 0x7F0F0093
 			public const int Base_V28_Theme_AppCompat = 2131689619;
 			
@@ -25547,6 +25774,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0F0098
 			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131689624;
+			
+			// aapt resource value: 0x7F0F0099
+			public const int Base_V7_Widget_AppCompat_EditText = 2131689625;
 			
 			// aapt resource value: 0x7F0F009A
 			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131689626;
@@ -25586,6 +25816,12 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0F00A6
 			public const int Base_Widget_AppCompat_ActivityChooserView = 2131689638;
+			
+			// aapt resource value: 0x7F0F00AC
+			public const int Base_Widget_AppCompat_ButtonBar = 2131689644;
+			
+			// aapt resource value: 0x7F0F00AD
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131689645;
 			
 			// aapt resource value: 0x7F0F00A7
 			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131689639;
@@ -26532,6 +26768,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0F01AD
 			public const int Theme_AppCompat_CompactMenu = 2131689901;
 			
+			// aapt resource value: 0x7F0F01B5
+			public const int Theme_MaterialComponents_DayNight_DialogWhenLarge = 2131689909;
+			
 			// aapt resource value: 0x7F0F01AE
 			public const int Theme_AppCompat_DayNight = 2131689902;
 			
@@ -26550,11 +26789,17 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0F01B2
 			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689906;
 			
+			// aapt resource value: 0x7F0F01B3
+			public const int Theme_MaterialComponents_DayNight_Dialog_MinWidth = 2131689907;
+			
 			// aapt resource value: 0x7F0F01B4
 			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689908;
 			
 			// aapt resource value: 0x7F0F01B5
 			public const int Theme_AppCompat_Dialog = 2131689909;
+			
+			// aapt resource value: 0x7F0F01B7
+			public const int Theme_MaterialComponents_DayNight_NoActionBar_Bridge = 2131689911;
 			
 			// aapt resource value: 0x7F0F01B8
 			public const int Theme_AppCompat_DialogWhenLarge = 2131689912;
@@ -26609,6 +26854,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0F01C7
 			public const int Theme_Design_NoActionBar = 2131689927;
+			
+			// aapt resource value: 0x7F0F01CF
+			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131689935;
 			
 			// aapt resource value: 0x7F0F01C8
 			public const int Theme_MaterialComponents = 2131689928;
@@ -26757,6 +27005,12 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0F01F8
 			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131689976;
 			
+			// aapt resource value: 0x7F0F0228
+			public const int Widget_AppCompat_Light_ActionButton = 2131690024;
+			
+			// aapt resource value: 0x7F0F0229
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131690025;
+			
 			// aapt resource value: 0x7F0F022A
 			public const int Widget_AppCompat_ActionBar = 2131690026;
 			
@@ -26813,6 +27067,12 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0F023A
 			public const int Widget_AppCompat_Button_Small = 2131690042;
+			
+			// aapt resource value: 0x7F0F023B
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131690043;
+			
+			// aapt resource value: 0x7F0F023C
+			public const int Widget_AppCompat_PopupWindow = 2131690044;
 			
 			// aapt resource value: 0x7F0F023D
 			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131690045;
@@ -27006,6 +27266,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 0x7F0F027C
 			public const int Widget_Design_Snackbar = 2131690108;
 			
+			// aapt resource value: 0x7F0F0281
+			public const int Widget_MaterialComponents_ChipGroup = 2131690113;
+			
 			// aapt resource value: 0x7F0F027D
 			public const int Widget_Design_TabLayout = 2131690109;
 			
@@ -27050,6 +27313,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0F028B
 			public const int Widget_MaterialComponents_Badge = 2131690123;
+			
+			// aapt resource value: 0x7F0F028F
+			public const int Widget_MaterialComponents_MaterialCalendar_DayTextView = 2131690127;
 			
 			// aapt resource value: 0x7F0F028C
 			public const int Widget_MaterialComponents_BottomAppBar = 2131690124;
@@ -27131,6 +27397,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0x7F0F02A5
 			public const int Widget_MaterialComponents_Chip_Filter = 2131690149;
+			
+			// aapt resource value: 0x7F0F02A6
+			public const int Widget_MaterialComponents_TabLayout = 2131690150;
 			
 			// aapt resource value: 0x7F0F02A7
 			public const int Widget_MaterialComponents_CircularProgressIndicator = 2131690151;
@@ -27903,6 +28172,10 @@ namespace ProjektMobliny.Droid
 			public static int[] AppCompatTheme = new int[] {
 					16842839,
 					16842926,
+					2130903040,
+					2130903041,
+					2130903042,
+					2130903043,
 					2130903044,
 					2130903045,
 					2130903046,
@@ -27916,6 +28189,7 @@ namespace ProjektMobliny.Droid
 					2130903054,
 					2130903055,
 					2130903056,
+					2130903057,
 					2130903058,
 					2130903059,
 					2130903060,
@@ -27950,7 +28224,14 @@ namespace ProjektMobliny.Droid
 					2130903172,
 					2130903173,
 					2130903203,
+					2130903204,
+					2130903211,
 					2130903212,
+					2130903218,
+					2130903233,
+					2130903258,
+					2130903259,
+					2130903260,
 					2130903263,
 					2130903264,
 					2130903265,
@@ -28145,6 +28426,12 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 0
 			public const int AppCompatTheme_android_windowIsFloating = 0;
+			
+			// aapt resource value: 37
+			public const int AppCompatTheme_autoCompleteTextViewStyle = 37;
+			
+			// aapt resource value: 38
+			public const int AppCompatTheme_borderlessButtonStyle = 38;
 			
 			// aapt resource value: 39
 			public const int AppCompatTheme_autoCompleteTextViewStyle = 39;
@@ -28505,6 +28792,24 @@ namespace ProjektMobliny.Droid
 					2130903783,
 					2130903784};
 			
+			// aapt resource value: 10
+			public const int BottomAppBar_paddingRightSystemWindowInsets = 10;
+			
+			// aapt resource value: { 0x7F03003D,0x7F0300F2,0x7F03014F,0x7F030152,0x7F030154,0x7F030155,0x7F030158,0x7F030164,0x7F030165,0x7F030166,0x7F03016A,0x7F0301A7 }
+			public static int[] BottomNavigationView = new int[] {
+					2130903101,
+					2130903282,
+					2130903375,
+					2130903378,
+					2130903380,
+					2130903381,
+					2130903384,
+					2130903396,
+					2130903397,
+					2130903398,
+					2130903402,
+					2130903463};
+			
 			// aapt resource value: 0
 			public const int BottomAppBar_backgroundTint = 0;
 			
@@ -28565,6 +28870,9 @@ namespace ProjektMobliny.Droid
 					2130903787,
 					2130903879,
 					2130903882};
+			
+			// aapt resource value: 0
+			public const int BottomSheetBehavior_Layout_android_elevation = 0;
 			
 			// aapt resource value: 1
 			public const int BottomSheetBehavior_Layout_android_elevation = 1;
@@ -28842,6 +29150,9 @@ namespace ProjektMobliny.Droid
 			// aapt resource value: 6
 			public const int Chip_android_checkable = 6;
 			
+			// aapt resource value: 2
+			public const int Chip_android_ellipsize = 2;
+			
 			// aapt resource value: 3
 			public const int Chip_android_ellipsize = 3;
 			
@@ -28859,6 +29170,9 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 1
 			public const int Chip_android_textSize = 1;
+			
+			// aapt resource value: 6
+			public const int Chip_checkedIcon = 6;
 			
 			// aapt resource value: 7
 			public const int Chip_checkedIcon = 7;
@@ -29075,6 +29389,12 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
+			
+			// aapt resource value: 10
+			public const int CollapsingToolbarLayout_maxLines = 10;
+			
+			// aapt resource value: 11
+			public const int CollapsingToolbarLayout_scrimAnimationDuration = 11;
 			
 			// aapt resource value: 12
 			public const int CollapsingToolbarLayout_maxLines = 12;
@@ -35044,6 +35364,12 @@ namespace ProjektMobliny.Droid
 			
 			// aapt resource value: 1
 			public const int TextInputLayout_android_textColorHint = 1;
+			
+			// aapt resource value: 3
+			public const int TextInputLayout_boxBackgroundColor = 3;
+			
+			// aapt resource value: 4
+			public const int TextInputLayout_boxBackgroundMode = 4;
 			
 			// aapt resource value: 5
 			public const int TextInputLayout_boxBackgroundColor = 5;
