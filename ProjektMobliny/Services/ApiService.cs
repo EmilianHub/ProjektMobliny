@@ -32,7 +32,11 @@ namespace ProjektMobliny.Services
         {
 
             GoogleDirection googleDirection = new GoogleDirection();
-            var response = await client.GetAsync($"api/directions/json?mode=driving&transit_routing_preference=less_driving&origin={originLatitude},{originLongitude}&destination={destinationLatitude},{destinationLongitude}&key={GoogleKey.Key}").ConfigureAwait(false);
+            var response = await client.GetAsync($"api/directions/json?mode=driving&transit_routing_preference=less_driving" +
+                $"&origin={originLatitude},{originLongitude}" +
+                $"&destination={destinationLatitude},{destinationLongitude}" +
+                $"&arrival_time={15}" +
+                $"&key={GoogleKey.Key}").ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);

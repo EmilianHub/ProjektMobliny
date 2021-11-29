@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
+using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
 using ProjektMobliny.ViewModels;
 using MvvmHelpers;
@@ -20,35 +20,36 @@ namespace ProjektMobliny.Views
         CultureInfo culture = new CultureInfo("en-US");
         public Exception exception;
         public List<StacjeMaps> Pins { get; set; }
-        public Position position;
-        public Location Location;
+        public Position Userposition;
+        public Position Stationposition;
+        public Location Location;       
         public string LatOrigin { get; set; }
         public string LngOrigin { get; set; }
         public Geolokacja()
         {
             InitializeComponent();
             Lokalizacja();
-            Mapy.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(5000)));
+            Mapy.MoveToRegion(MapSpan.FromCenterAndRadius(Userposition, Distance.FromMeters(5000)));
             Pins = new List<StacjeMaps>()
             {
                 new StacjeMaps(){Nazwa = "Orlen", Latitude = 49.75646382302269, Longitude=20.74837194079188},
-                new StacjeMaps(){Nazwa = "Lotos", Latitude = 49.63320891434197, Longitude=20.692252999627673},           
+                new StacjeMaps(){Nazwa = "Lotos", Latitude = 49.63320891434197, Longitude=20.692252999627673},
                 new StacjeMaps(){Nazwa = "BP", Latitude = 49.63968479822199, Longitude=20.695299988939016}
             };
+            Stationposition = new Position(Pins[1].Latitude, Pins[1].Longitude);
             LoadPins();
             Trasa();
         }
-
         public async void Lokalizacja()
         {
             try
             {
                 var lokacja = await Geolocation.GetLastKnownLocationAsync();
-                 
-                LatOrigin = Convert.ToString(lokacja.Latitude, culture);            
+
+                LatOrigin = Convert.ToString(lokacja.Latitude, culture);
                 LngOrigin = Convert.ToString(lokacja.Longitude, culture);
-                
-                position = new Position(lokacja.Latitude, lokacja.Longitude);
+
+                Userposition = new Position(lokacja.Latitude, lokacja.Longitude);
                 if (lokacja == null)
                 {
                     lokacja = await Geolocation.GetLocationAsync(new GeolocationRequest
@@ -87,12 +88,12 @@ namespace ProjektMobliny.Views
                 DisplayAlert("Error", $"{e.Message}", "OK");
             }
         }
-   
+
         internal async Task<List<Position>> LoadRoute()
         {
             var googleDirection = await ApiService.ServiceClientInstance.GetDirection(LatOrigin, LngOrigin, $"49.63320891434197", $"20.692252999627673");
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
-            {
+            {             
                 var positions = Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points));
                 return positions;
             }
@@ -102,22 +103,22 @@ namespace ProjektMobliny.Views
                 return null;
             }
         }
-    
+
         private async void Trasa()
         {
             var content = await LoadRoute();
-            var polyline = new Xamarin.Forms.Maps.Polyline();
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline();
             polyline.StrokeColor = Color.Blue;
             polyline.StrokeWidth = 10;
             try
             {
-                foreach(var linia in content)
+                foreach (var linia in content)
                 {
-                    polyline.Geopath.Add(linia);
+                    polyline.Positions.Add(linia);
                 }
-                Mapy.MapElements.Add(polyline);              
+                Mapy.Polylines.Add(polyline);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 await DisplayAlert("Error", $"{e.Message}", "OK");
             }

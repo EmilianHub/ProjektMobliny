@@ -16,7 +16,7 @@ namespace ProjektMobliny.Models
 
         public override string ToString()
         {
-            return this.Nazwa;
-        }     
+            return Nazwa;
+        }
     }
 }
