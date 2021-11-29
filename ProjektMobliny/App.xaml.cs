@@ -3,6 +3,7 @@ using ProjektMobliny.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Threading;
 
 namespace ProjektMobliny
 {
@@ -19,14 +20,10 @@ namespace ProjektMobliny
 
         protected override void OnStart()
         {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            var cultureVal = "pl-PL";
+            
+           Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(cultureVal);
+           Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(cultureVal);
         }
     }
 }
