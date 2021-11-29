@@ -7,12 +7,13 @@ using Xamarin.Forms;
 
 namespace ProjektMobliny.ViewModels
 {
-    public class NewItemViewModel : BaseViewModel
+    public class NewPowiadomieniaViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
+        public string text;
+        public string description;
+        public string czas;
 
-        public NewItemViewModel()
+        public NewPowiadomieniaViewModel()
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
@@ -37,6 +38,11 @@ namespace ProjektMobliny.ViewModels
             get => description;
             set => SetProperty(ref description, value);
         }
+        public string Czas
+        {
+            get => czas;
+            set => SetProperty(ref czas, value);
+        }
 
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
@@ -47,13 +53,14 @@ namespace ProjektMobliny.ViewModels
             await Shell.Current.GoToAsync("..");
         }
 
-        private async void OnSave()
+        public async void OnSave()
         {
             Item newItem = new Item()
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                Description = Description,
+                Czas = $"{DateTime.Now}",
             };
 
             await DataStore.AddItemAsync(newItem);

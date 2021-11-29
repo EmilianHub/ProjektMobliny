@@ -6,7 +6,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Plugin.LocalNotification" Version="9.0.1" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />  
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.3.0" />  
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2244" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\geolokacja.xaml.cs">
+      <DependentUpon>Geolokacja.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PowiadomieniaDetailPage.xaml.cs">
+      <DependentUpon>PowiadomieniaDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewPowiadomieniaPage.xaml.cs">
+      <DependentUpon>NewPowiadomieniaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PowiadomieniaPage.xaml.cs">
+      <DependentUpon>PowiadomieniaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Geolokacja.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

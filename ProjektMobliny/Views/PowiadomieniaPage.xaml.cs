@@ -12,21 +12,27 @@ using Xamarin.Forms.Xaml;
 
 namespace ProjektMobliny.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class PowiadomieniaPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        PowiadomieniaViewModel _viewModel;
 
-        public ItemsPage()
+        public PowiadomieniaPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new PowiadomieniaViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             _viewModel.OnAppearing();
+        }
+
+        private void Powiadomienia_Clicked(object sender, EventArgs e)
+        {
+            base.OnAppearing();
+            _viewModel.Powiadomienia();
         }
     }
 }

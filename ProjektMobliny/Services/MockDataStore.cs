@@ -14,12 +14,8 @@ namespace ProjektMobliny.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Paliwo coraz droższe", Description="Kierowcy są zdruzgotani paliwo wciąż rośnie", Czas = "18.11.2021"},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Ceny powyżej 6 zł", Description="Pozdrawiam", Czas = "28.11.2021"},
             };
         }
 

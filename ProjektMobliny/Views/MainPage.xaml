@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:ProjektMobliny.ViewModels" xmlns:Models="clr-namespace:ProjektMobliny.Models"
+             x:Class="ProjektMobliny.Views.MainPage"
+             x:DataType="viewmodels:MainViewModel"
+             Title="Tanioszka¿">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Label HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   FontSize="20.9"
+                   Text="Tabela przedstawiajaca ceny paliw"
+                   HorizontalTextAlignment="Center"
+                   TextColor ="Black" />
+
+        <Frame Margin="5,0,5,-5" Padding="0" BackgroundColor="Bisque" BorderColor="Black" CornerRadius="10">
+            <Grid Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="10,0,10,0" Text="Nazwa stacji" VerticalOptions="Center" Grid.Column="0" TextColor="Black"/>
+                <Image Source="pb95.png" Grid.Column="1" VerticalOptions="Center" HeightRequest="30" />
+                <Image Source="pb98.png" Grid.Column="2" VerticalOptions="Center" HeightRequest="30" />
+                <Image Source="ON.png" Grid.Column="3" VerticalOptions="Center" HeightRequest="30" />
+                <Image Source="LPG.jpg" Grid.Column="4" VerticalOptions="Center" HeightRequest="30" />
+                <BoxView Grid.Column="0" 
+                             BackgroundColor="DarkSlateGray" 
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="FillAndExpand"
+                             WidthRequest="1"/>
+            </Grid>
+        </Frame>
+        <ListView ItemsSource="{Binding Stacja}" SeparatorVisibility="None" SelectionMode="None" VerticalOptions="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="Models:Stacje">
+                    <ViewCell>
+                        <Frame Margin="5,0,5,0" Padding="0" BorderColor="Black" CornerRadius="5">
+                            <Grid Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="110"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Margin="10,0,10,0" Text="{Binding Nazwa}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" TextColor="Black"/>
+                                <Label Margin="10,0,10,0" Text="{Binding Cena95}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" TextColor="Black"/>
+                                <Label Margin="10,0,10,0" Text="{Binding Cena98}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" TextColor="Black"/>
+                                <Label Margin="10,0,10,0" Text="{Binding CenaON}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="3" TextColor="Black"/>
+                                <Label Margin="10,0,10,0" Text="{Binding CenaLPG}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="4" TextColor="Black"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Frame CornerRadius="20" Margin="0,0,0,120">
+            <StackLayout>
+                <Label VerticalOptions="Center"
+                           FontSize="18"
+                           VerticalTextAlignment="Start"
+                           Text="Insturkcja obsługi&#10;Krok 1: Przejdź do zakładki nawigacja lub kliknij przycisk poniżej&#10;Krok 2: Wybierz nazwe stacji i rodzaj paliwa, który poszukujesz&#10;Krok 3: Podążaj trasą :)"
+                           HorizontalTextAlignment="Center"
+                           TextColor ="Black"                       
+                            />
+                <Button VerticalOptions="Center"
+                        TextColor="WhiteSmoke"
+                        Text="Otwórz mapy"
+                        FontSize="Large"
+                        BackgroundColor="#2196F3"
+                        Clicked="OpenGeolokacje_Clicked"
+                        CornerRadius="20"
+                        />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
