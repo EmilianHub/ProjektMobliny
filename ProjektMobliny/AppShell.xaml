@@ -87,7 +87,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Kalkulator" Icon="kalkulator.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:PowiadomieniaPage}" />
+        <ShellContent Route="KalkulatorPage" ContentTemplate="{DataTemplate local:KalkulatorPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Powiadomienia" Icon="Powiadomienia.png">
