@@ -45,6 +45,10 @@ namespace ProjektMobliny.Models
         public string Text { get; set; }
         [JsonProperty("value")]
         public int Value { get; set; }
+        public override string ToString()
+        {
+            return Text;
+        }
     }
 
     public class Duration
@@ -53,6 +57,10 @@ namespace ProjektMobliny.Models
         public string Text { get; set; }
         [JsonProperty("value")]
         public int Value { get; set; }
+        public override string ToString()
+        {
+            return Text;
+        }
     }
 
     public class EndLocation

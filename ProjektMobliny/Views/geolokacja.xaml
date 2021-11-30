@@ -42,7 +42,11 @@
             <Picker Title="Wybierz stację" TitleColor="Black" TextColor="Black" ItemsSource="{Binding Stacja}" Grid.Column="1" Grid.Row="0"/>
             <Picker Title="Wybierz rodzaj paliwa" TitleColor="Black" TextColor="Black" ItemsSource="{Binding Stacja}" Grid.Column="1" Grid.Row="1"/>
             <Button Text="Go" TextColor="Black" BorderWidth="2" BorderColor="Black" Grid.Column="2" Grid.Row="1" Background="White" WidthRequest="50" HeightRequest="30" VerticalOptions="FillAndExpand" CornerRadius="25"/>
+           
         </Grid>
+        <StackLayout Grid.Row="2" Background="#EDEDED">
+            <Label x:Name="Footer" TextColor="Green"  HorizontalOptions="Center" FontSize="Medium" Text="&#x30FB;"/>
+        </StackLayout>
     </Grid>
 
 

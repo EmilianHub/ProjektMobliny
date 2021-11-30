@@ -21,8 +21,10 @@ namespace ProjektMobliny.Views
         public Exception exception;
         public List<StacjeMaps> Pins { get; set; }
         public Position Userposition;
-        public Position Stationposition;
-        public Location Location;       
+        public Position Stationposition;      
+        public Location Location;
+        public DistanceOp distance;
+        public Duration czas;
         public string LatOrigin { get; set; }
         public string LngOrigin { get; set; }
         public Geolokacja()
@@ -93,9 +95,12 @@ namespace ProjektMobliny.Views
         {
             var googleDirection = await ApiService.ServiceClientInstance.GetDirection(LatOrigin, LngOrigin, $"49.63320891434197", $"20.692252999627673");
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
-            {             
+            {
                 var positions = Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points));
+                distance = googleDirection.Routes[0].Legs[0].Distance;
+                czas = googleDirection.Routes[0].Legs[0].Duration;
                 return positions;
+                
             }
             else
             {
@@ -117,6 +122,7 @@ namespace ProjektMobliny.Views
                     polyline.Positions.Add(linia);
                 }
                 Mapy.Polylines.Add(polyline);
+                Footer.Text = $"{distance} • {czas}";
             }
             catch (Exception e)
             {

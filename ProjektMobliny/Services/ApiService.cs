@@ -35,7 +35,7 @@ namespace ProjektMobliny.Services
             var response = await client.GetAsync($"api/directions/json?mode=driving&transit_routing_preference=less_driving" +
                 $"&origin={originLatitude},{originLongitude}" +
                 $"&destination={destinationLatitude},{destinationLongitude}" +
-                $"&arrival_time={15}" +
+                "&alternatives=true" +
                 $"&key={GoogleKey.Key}").ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -45,7 +45,6 @@ namespace ProjektMobliny.Services
                     googleDirection = await Task.Run(() =>
                            JsonConvert.DeserializeObject<GoogleDirection>(json)
                         ).ConfigureAwait(false);
-
                 }
             }                
             return googleDirection;
