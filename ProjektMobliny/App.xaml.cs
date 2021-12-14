@@ -1,4 +1,5 @@
-﻿using ProjektMobliny.Services;
+﻿using ProjektMobliny.Data;
+using ProjektMobliny.Services;
 using ProjektMobliny.Views;
 using System;
 using Xamarin.Forms;
@@ -8,7 +9,20 @@ namespace ProjektMobliny
 {
     public partial class App : Application
     {
+        private static  PaliwoDatabase paliwoDatabase;
+        public static PaliwoDatabase PaliwoDatabase
+        {
+            
+         get
+            {
+                if (paliwoDatabase == null)
+                {
+                    paliwoDatabase = new PaliwoDatabase();
 
+                }
+                return paliwoDatabase;
+            }
+        }
         public App()
         {
             InitializeComponent();
