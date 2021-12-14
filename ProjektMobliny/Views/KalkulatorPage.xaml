@@ -57,7 +57,7 @@
 
     </ContentPage.Resources>
 
-    <Grid Margin="10">
+    <Grid Padding="10" BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -73,7 +73,7 @@
             <ColumnDefinition />
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Entry Grid.ColumnSpan="5" Text="{Binding ScreenVal}" TextColor="Black"/>
+        <Entry Grid.ColumnSpan="5" Text="{Binding ScreenVal}" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
         <Button Grid.Row="1" Grid.Column="0" Text="7"
                 Style="{StaticResource BtnNumber}" Command="{Binding AddNumberCommand}" CommandParameter="7"/>
         <Button Grid.Row="1" Grid.Column="1" Text="8"

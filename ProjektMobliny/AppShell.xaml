@@ -3,7 +3,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:ProjektMobliny.Views"
        Title="ProjektMobliny"
-       x:Class="ProjektMobliny.AppShell">
+       x:Class="ProjektMobliny.AppShell"
+       FlyoutBackground="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}">
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -14,12 +15,12 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Dark={StaticResource PrimaryDark}, Light={StaticResource Primary}}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Dark={StaticResource PrimaryDark}, Light={StaticResource Primary}}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -40,13 +41,14 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource Primary}}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource SelcetedDark}, Light={StaticResource Primary}}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource TextColorDark}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -93,10 +95,11 @@
     <FlyoutItem Title="Powiadomienia" Icon="Powiadomienia.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:PowiadomieniaPage}" />
     </FlyoutItem>
-
     <FlyoutItem Title="Ustawienia" Icon="ustawienia.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:PowiadomieniaPage}" />
+        <ShellContent Route="UstawieniaPage" ContentTemplate="{DataTemplate local:UstawieniaPage}" />
     </FlyoutItem>
+    
+  
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>

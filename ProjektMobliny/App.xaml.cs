@@ -1,4 +1,5 @@
-﻿using ProjektMobliny.Services;
+﻿using ProjektMobliny.Motywy;
+using ProjektMobliny.Services;
 using ProjektMobliny.Views;
 using System;
 using System.Threading;
@@ -13,7 +14,7 @@ namespace ProjektMobliny
         public App()
         {
             InitializeComponent();
-
+            UstawMotyw.WczytajMotyw();
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
