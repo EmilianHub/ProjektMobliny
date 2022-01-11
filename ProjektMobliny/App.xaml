@@ -7,15 +7,23 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="TextColorDark">White</Color>
+            <Color x:Key="TextColor">Black</Color>
             <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Background">White</Color>
+            <Color x:Key="Selected">#2196F3</Color>
+            <Color x:Key="PrimaryDark">#FF8F00</Color>
+            <Color x:Key="BackgroundDark">#282828</Color>
+            <Color x:Key="SecondBackgroundDark">#2E3134</Color>
+            <Color x:Key="SelcetedDark">#B00020</Color>
             <Style TargetType="Button">
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Disabled">

@@ -4,7 +4,8 @@
              xmlns:viewmodels="clr-namespace:ProjektMobliny.ViewModels" xmlns:Models="clr-namespace:ProjektMobliny.Models"
              x:Class="ProjektMobliny.Views.MainPage"
              x:DataType="viewmodels:MainViewModel"
-             Title="Tanioszka¿">
+             Title="Tanioszka¿"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}">
 
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel />
@@ -15,7 +16,7 @@
                    FontSize="20.9"
                    Text="Tabela przedstawiajaca ceny paliw"
                    HorizontalTextAlignment="Center"
-                   TextColor ="Black" />
+                   TextColor ="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}" />
 
         <Frame Margin="5,0,5,-5" Padding="0" BackgroundColor="Bisque" BorderColor="Black" CornerRadius="10">
             <Grid Padding="0">
@@ -44,7 +45,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="Models:Stacje">
                     <ViewCell>
-                        <Frame Margin="5,0,5,0" Padding="0" BorderColor="Black" CornerRadius="5">
+                        <Frame Margin="5,0,5,0" Padding="0" BorderColor="Black" CornerRadius="5" BackgroundColor="{AppThemeBinding Dark={StaticResource SecondBackgroundDark}, Light={StaticResource Background}}">
                             <Grid Padding="0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="80"/>
@@ -73,13 +74,13 @@
                            VerticalTextAlignment="Start"
                            Text="Insturkcja obsługi&#10;Krok 1: Przejdź do zakładki nawigacja lub kliknij przycisk poniżej&#10;Krok 2: Wybierz nazwe stacji i rodzaj paliwa, który poszukujesz&#10;Krok 3: Podążaj trasą :)"
                            HorizontalTextAlignment="Center"
-                           TextColor ="Black"                       
+                           TextColor ="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"                       
                             />
                 <Button VerticalOptions="Center"
-                        TextColor="WhiteSmoke"
+                        TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"
                         Text="Otwórz mapy"
                         FontSize="Large"
-                        BackgroundColor="#2196F3"
+                        BackgroundColor="{AppThemeBinding Dark={StaticResource PrimaryDark}, Light={StaticResource Primary}}"
                         Clicked="OpenGeolokacje_Clicked"
                         CornerRadius="20"
                         />

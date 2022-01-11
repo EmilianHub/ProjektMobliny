@@ -35,7 +35,6 @@ namespace ProjektMobliny.Services
             var response = await client.GetAsync($"api/directions/json?mode=driving&transit_routing_preference=less_driving" +
                 $"&origin={originLatitude},{originLongitude}" +
                 $"&destination={destinationLatitude},{destinationLongitude}" +
-                "&alternatives=true" +
                 $"&key={GoogleKey.Key}").ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {

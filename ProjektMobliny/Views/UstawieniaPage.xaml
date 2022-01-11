@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjektMobliny.Views.UstawieniaPage"
+             Title="Ustawienia"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions=".05*,.9*,.05*"             
+              Padding="12">
+            <StackLayout Grid.Column="1">
+                <Label Text="Motywy" FontSize="Large" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                <Frame CornerRadius="12" BorderColor="Black" BackgroundColor="{StaticResource BackgroundDark}">
+                    <Grid ColumnDefinitions="*,auto, auto, auto, *"
+                          ColumnSpacing="10"
+                          RowDefinitions="Auto, Auto"
+                          RowSpacing="10">
+                        <RadioButton x:Name="ButtonLight" CheckedChanged="RadioButton_CheckedChanged" Grid.Column="1" Content="Light"/>
+                        <Image Source="sun.png" Grid.Column="1" Grid.Row="2"/>
+                        <RadioButton x:Name="ButtonDark" CheckedChanged="RadioButton_CheckedChanged" Grid.Column="3" Content="Dark"/>
+                        <Image Source="moon.png" Grid.Column="3" Grid.Row="2"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -4,7 +4,7 @@
              xmlns:ViewModels="clr-namespace:ProjektMobliny.ViewModels" 
              xmlns:local="clr-namespace:ProjektMobliny.Views"
              xmlns:Models="clr-namespace:ProjektMobliny.Models" 
-             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:map="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              x:DataType="ViewModels:MainViewModel"
              Title="Geolokacja"
              x:Class="ProjektMobliny.Views.Geolokacja"
@@ -18,7 +18,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <maps:Map x:DataType="local:Geolokacja" x:Name="Mapy" IsShowingUser="True" Grid.Row="0" Grid.RowSpan="3"/>
+        <map:Map x:DataType="local:Geolokacja" x:Name="Mapy" Grid.Row="0" Grid.RowSpan="3" MyLocationEnabled="True"/>
         <Grid Padding="15,10"
           Margin="20,5,20,20"
           ColumnSpacing="10"

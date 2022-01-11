@@ -22379,7 +22379,7 @@ namespace ProjektMobliny.Droid
 			public const int material_ic_menu_arrow_down_black_24dp = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165327;
+			public const int moon = 2131165327;
 			
 			// aapt resource value: 0x7F070090
 			public const int mtrl_dialog_background = 2131165328;
@@ -22469,19 +22469,22 @@ namespace ProjektMobliny.Droid
 			public const int strona_glowna = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int test_custom_background = 2131165357;
+			public const int sun = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int tooltip_frame_dark = 2131165358;
+			public const int test_custom_background = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int tooltip_frame_light = 2131165359;
+			public const int tooltip_frame_dark = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int ustawienia = 2131165360;
+			public const int tooltip_frame_light = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int xamarin_logo = 2131165361;
+			public const int ustawienia = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int xamarin_logo = 2131165362;
 			
 			static Drawable()
 			{
