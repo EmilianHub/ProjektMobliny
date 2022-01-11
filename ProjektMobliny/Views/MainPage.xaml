@@ -28,11 +28,12 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Margin="10,0,10,0" Text="Nazwa stacji" VerticalOptions="Center" Grid.Column="0" TextColor="Black"/>
-                <Image Source="pb95.png" Grid.Column="1" VerticalOptions="Center" HeightRequest="30" />
-                <Image Source="pb98.png" Grid.Column="2" VerticalOptions="Center" HeightRequest="30" />
-                <Image Source="ON.png" Grid.Column="3" VerticalOptions="Center" HeightRequest="30" />
-                <Image Source="LPG.jpg" Grid.Column="4" VerticalOptions="Center" HeightRequest="30" />
+                <Label Margin="10,0,10,0" Text="Nazwa&#10;stacji" VerticalOptions="Center" Grid.Column="0" TextColor="Black"/>
+                <Image Source="pb95.png" Grid.Column="1" VerticalOptions="Center" HeightRequest="17" />
+                <Image Source="pb98.png" Grid.Column="2" VerticalOptions="Center" HeightRequest="17" />
+                <Image Source="ON.png" Grid.Column="3" VerticalOptions="Center" HeightRequest="17" Margin="0,0,20,0"/>
+                <Image Source="LPG.jpg" Grid.Column="4" VerticalOptions="Center" HeightRequest="17" Margin="0,0,35,0"/>
+                <Image Source="adres.png" Grid.Column="5" VerticalOptions="Center" HeightRequest="17" Margin="0,0,35,0"/>
                 <BoxView Grid.Column="0" 
                              BackgroundColor="DarkSlateGray" 
                              HorizontalOptions="EndAndExpand" 
@@ -47,20 +48,25 @@
                         <Frame Margin="5,0,5,0" Padding="0" BorderColor="Black" CornerRadius="5" BackgroundColor="{AppThemeBinding Dark={StaticResource SecondBackgroundDark}, Light={StaticResource Background}}">
                             <Grid Padding="0">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="110"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Margin="10,0,10,0" Text="{Binding Nazwa}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
-                                <Label Margin="10,0,10,0" Text="{Binding Cena95}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
-                                <Label Margin="10,0,10,0" Text="{Binding Cena98}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
-                                <Label Margin="10,0,10,0" Text="{Binding CenaON}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="3" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
-                                <Label Margin="10,0,10,0" Text="{Binding CenaLPG}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="4" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                                <Label Margin="10,0,0,0" Text="{Binding Nazwa}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                                <Label Margin="0,0,10,0" Text="{Binding Cena95}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="1" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                                <Label  Text="{Binding Cena98}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="2" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                                <Label  Text="{Binding CenaON}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="3" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                                <Label  Text="{Binding CenaLPG}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="4" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
+                                <Label  Text="{Binding adres}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="5" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
                             </Grid>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Frame CornerRadius="20" Margin="0,0,0,120" BackgroundColor="{AppThemeBinding Dark={StaticResource SecondBackgroundDark}, Light={StaticResource Background}}">
+        <Frame CornerRadius="20" Margin="0,0,0,10" BackgroundColor="{AppThemeBinding Dark={StaticResource SecondBackgroundDark}, Light={StaticResource Background}}">
             <StackLayout>
                 <Label VerticalOptions="Center"
                            FontSize="18"
