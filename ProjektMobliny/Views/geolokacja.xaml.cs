@@ -20,6 +20,7 @@ namespace ProjektMobliny.Views
         CultureInfo culture = new CultureInfo("en-US");
         public Exception exception;
         public List<StacjeMaps> Pins { get; set; }
+        public List<adres> Orlen { get; set; }
         public Position Userposition;
         public Position Stationposition;      
         public Location Location;
@@ -37,6 +38,11 @@ namespace ProjektMobliny.Views
                 new StacjeMaps(){Nazwa = "Orlen", Latitude = 49.75646382302269, Longitude=20.74837194079188},
                 new StacjeMaps(){Nazwa = "Lotos", Latitude = 49.63320891434197, Longitude=20.692252999627673},
                 new StacjeMaps(){Nazwa = "BP", Latitude = 49.63968479822199, Longitude=20.695299988939016}
+            };
+            Orlen = new List<adres>()
+            {
+                new adres(){marka = "Orlen", },
+                new adres(){marka = "Orlen", }
             };
             Stationposition = new Position(Pins[1].Latitude, Pins[1].Longitude);
             LoadPins();
