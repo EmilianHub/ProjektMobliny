@@ -39,9 +39,32 @@
                 <BoxView WidthRequest="0.5" HorizontalOptions="Center" VerticalOptions="FillAndExpand" Color="Gray"/>
                 <BoxView HeightRequest="5" WidthRequest="5" Color="Black" CornerRadius="1"/>
             </StackLayout>
-            <Picker Title="Wybierz stację" TitleColor="Black" TextColor="Black" ItemsSource="{Binding Stacja}" Grid.Column="1" Grid.Row="0"/>
-            <Picker Title="Wybierz rodzaj paliwa" TitleColor="Black" TextColor="Black" ItemsSource="{Binding Stacja}" Grid.Column="1" Grid.Row="1"/>
-            <Button Text="Go" TextColor="Black" BorderWidth="2" BorderColor="Black" Grid.Column="2" Grid.Row="1" Background="White" WidthRequest="50" HeightRequest="30" VerticalOptions="FillAndExpand" CornerRadius="25"/>
+            <Picker x:Name="Picker" Title="Wybierz stację" TitleColor="Black" TextColor="Black" Grid.Column="1" Grid.Row="0">
+                <Picker.Items>
+                    <x:String>Orlen</x:String>
+                    <x:String>BP</x:String>
+                    <x:String>Shell</x:String>
+                    <x:String>Lotos</x:String>
+                    <x:String>Circle</x:String>
+                    <x:String>Mpk</x:String>
+                    <x:String>Tank System</x:String>
+                    <x:String>AS24</x:String>
+                    <x:String>Olma</x:String>
+                    <x:String>Moya</x:String>
+                    <x:String>Petrodom</x:String>
+                    <x:String>Huzar</x:String>
+                    <x:String>Grod</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker Title="Wybierz rodzaj paliwa" TitleColor="Black" TextColor="Black" Grid.Column="1" Grid.Row="1">
+                <Picker.Items>
+                    <x:String>PB95</x:String>
+                    <x:String>PB98</x:String>
+                    <x:String>LPG</x:String>
+                    <x:String>ON</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Go" TextColor="Black" BorderWidth="2" BorderColor="Black" Grid.Column="2" Grid.Row="1" Background="White" WidthRequest="50" HeightRequest="30" VerticalOptions="FillAndExpand" CornerRadius="25" Clicked="Button_Clicked"/>
            
         </Grid>
         <StackLayout Grid.Row="2" Background="#EDEDED">

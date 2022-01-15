@@ -44,15 +44,15 @@
         <ListView ItemsSource="{Binding Stacja}" SeparatorVisibility="None" SelectionMode="None" VerticalOptions="Center">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="Models:Stacje">
-                    <ViewCell>
+                    <ViewCell Height="16">
                         <Frame Margin="5,0,5,0" Padding="0" BorderColor="Black" CornerRadius="5" BackgroundColor="{AppThemeBinding Dark={StaticResource SecondBackgroundDark}, Light={StaticResource Background}}">
-                            <Grid Padding="0">
+                            <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="79"/>
                                     <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="35"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Margin="10,0,0,0" Text="{Binding Nazwa}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
                                 <Label Margin="0,0,10,0" Text="{Binding Cena95}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="1" TextColor="{AppThemeBinding Dark={StaticResource TextColorDark}, Light={StaticResource TextColor}}"/>
